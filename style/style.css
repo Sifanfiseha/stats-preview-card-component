@@ -1,0 +1,126 @@
+@import url(./reset.css);
+:root {
+  /* Primary */
+
+  /* (main background) */
+  --Very-dark-blue: hsl(233, 47%, 7%);
+
+  /* (card background) */
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+
+  /* (accent) */
+  --Soft-violet: hsl(277, 64%, 61%);
+
+  /* Neutral */
+
+  /* (main heading, stats) */
+  --White: hsl(0, 0%, 100%);
+
+  /* (main paragraph) */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  /* (stat headings) */
+  --Slightly-transparent-white-st: hsla(0, 0%, 100%, 0.6);
+}
+body {
+  font-family: "Inter", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--Very-dark-blue);
+  color: var(--White);
+  font-size: 15px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Dark-desaturated-blue);
+  gap: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+h1 {
+  line-height: 1.2;
+  /* font-size: 1.5rem; */
+}
+h1 span {
+  color: var(--Soft-violet);
+}
+h1,
+p {
+  text-align: center;
+}
+p {
+  color: var(--Slightly-transparent-white);
+}
+.image {
+  order: -1;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.725rem;
+}
+.num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--White);
+}
+.title {
+  text-transform: uppercase;
+  color: var(--Slightly-transparent-white-st);
+}
+.contnet {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+}
+.desktop {
+  display: none;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 450px) {
+  .container {
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .image {
+    order: 2;
+  }
+  .desktop {
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+  }
+  .mobile {
+    display: none;
+  }
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .contnet {
+    justify-content: space-between;
+    padding: 4rem 0 4rem 4rem;
+  }
+  p,
+  h1 {
+    text-align: start;
+  }
+  .container {
+    gap: 4rem;
+    width: 1014px;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+}
