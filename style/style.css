@@ -65,7 +65,8 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--Soft-violet-bg);
+  background-color: var(--Soft-violet);
+  mix-blend-mode: multiply;
 }
 .stats {
   display: flex;
